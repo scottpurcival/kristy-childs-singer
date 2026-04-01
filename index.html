@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Kristy Childs | Pop &amp; Country Singer</title>
+  <meta name="description" content="Official website of Kristy Childs – pop and country singer-songwriter. Stream music, view the gallery, and get in touch.">
+  <meta name="keywords" content="Kristy Childs, singer, songwriter, pop, country, music">
+  <meta name="author" content="Kristy Childs">
+  <link rel="canonical" href="https://kristychilds.github.io">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kristy Childs | Pop &amp; Country Singer">
+  <meta property="og:description" content="Official website of Kristy Childs – pop and country singer-songwriter.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kristychilds.github.io">
+  <meta property="og:image" content="media/img/646235904_122198033198548864_3243869592250960701_n.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kristy Childs | Pop &amp; Country Singer">
+  <meta name="twitter:description" content="Official website of Kristy Childs – pop and country singer-songwriter.">
+  <meta name="twitter:image" content="media/img/646235904_122198033198548864_3243869592250960701_n.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Kristy Childs",
+    "genre": ["Pop", "Country"],
+    "url": "https://kristychilds.github.io",
+    "description": "Pop and country singer-songwriter.",
+    "image": "media/img/646235904_122198033198548864_3243869592250960701_n.jpg"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" aria-label="Kristy Childs – home">
+      <span class="logo-kc" aria-hidden="true">KC</span>
+      <span class="logo-name">Kristy Childs</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#music">Music</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-socials" aria-label="Social media links">
+      <a href="#" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Spotify" rel="noopener noreferrer" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="#" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="TikTok" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero" aria-label="Hero">
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div class="hero-bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-genre">Pop &amp; Country</p>
+    <h1 class="hero-title">
+      <span class="hero-first">Kristy</span>
+      <span class="hero-last">Childs</span>
+    </h1>
+    <p class="hero-sub">Singer &nbsp;·&nbsp; Songwriter &nbsp;·&nbsp; Performer</p>
+    <div class="hero-cta">
+      <a href="#music" class="btn btn-primary"><i class="fas fa-play" aria-hidden="true"></i> Listen Now</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===================== MUSIC PLAYER ===================== -->
+<section id="music" class="music-section" aria-label="Music player">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-tag">Featured Music</span>
+      <h2 class="section-title">Listen &amp; Feel</h2>
+    </header>
+
+    <div class="player-wrapper reveal" role="region" aria-label="Audio player">
+      <!-- Main display -->
+      <div class="player-main">
+        <div class="player-visual" aria-hidden="true">
+          <div class="player-disc" id="playerDisc">
+            <div class="disc-ring"></div>
+            <div class="disc-center">
+              <i class="fas fa-music"></i>
+            </div>
+          </div>
+          <div class="eq-bars" id="eqBars">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="player-info">
+          <div class="now-playing-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Now Playing</span>
+          </div>
+
+          <h3 class="track-name" id="trackName">Your Girl</h3>
+          <p class="track-artist">Kristy Childs</p>
+
+          <!-- Progress -->
+          <div class="progress-row">
+            <time class="time-el" id="timeCurrent">0:00</time>
+            <div class="progress-track" id="progressTrack" role="slider"
+                 aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="progress-fill" id="progressFill">
+                <div class="progress-thumb"></div>
+              </div>
+            </div>
+            <time class="time-el" id="timeTotal">0:00</time>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls" aria-label="Playback controls">
+            <button class="ctrl ctrl-sm" id="btnShuffle" aria-label="Shuffle" aria-pressed="false">
+              <i class="fas fa-shuffle"></i>
+            </button>
+            <button class="ctrl" id="btnPrev" aria-label="Previous track">
+              <i class="fas fa-backward-step"></i>
+            </button>
+            <button class="ctrl ctrl-play" id="btnPlay" aria-label="Play">
+              <i class="fas fa-play" id="playIcon"></i>
+            </button>
+            <button class="ctrl" id="btnNext" aria-label="Next track">
+              <i class="fas fa-forward-step"></i>
+            </button>
+            <button class="ctrl ctrl-sm" id="btnRepeat" aria-label="Repeat" aria-pressed="false">
+              <i class="fas fa-repeat"></i>
+            </button>
+          </div>
+
+          <!-- Volume -->
+          <div class="volume-row">
+            <button class="vol-btn" id="btnMute" aria-label="Mute toggle">
+              <i class="fas fa-volume-high" id="volIcon"></i>
+            </button>
+            <input type="range" class="vol-slider" id="volSlider"
+                   min="0" max="100" value="80" aria-label="Volume">
+          </div>
+        </div>
+      </div>
+
+      <!-- Playlist -->
+      <aside class="playlist" aria-label="Track list">
+        <div class="playlist-head">
+          <h4>Tracks</h4>
+          <span id="trackCount" class="track-count"></span>
+        </div>
+        <ul class="playlist-list" id="playlistList" role="list"></ul>
+      </aside>
+    </div>
+
+    <audio id="audioEl" preload="metadata"></audio>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="about-section" aria-label="About Kristy Childs">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-frame">
+          <img src="media/img/646235904_122198033198548864_3243869592250960701_n.jpg"
+               alt="Kristy Childs – singer and songwriter"
+               loading="lazy" width="600" height="700">
+        </div>
+        <div class="about-img-border" aria-hidden="true"></div>
+        <div class="about-img-glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-content reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title about-title">The Voice Behind<br>The Music</h2>
+        <p class="about-lead">
+          Hi, I'm Kristy Childs — a passionate singer and songwriter with a heart
+          full of music that blends the honest storytelling of country with the
+          infectious energy of pop.
+        </p>
+        <p class="about-body">
+          Music has always been my way of connecting with the world. Whether it's
+          a quiet ballad that captures an unspoken feeling, or an upbeat anthem
+          that gets you moving, I pour everything into every single note. My songs
+          are drawn from real life — love, loss, joy, and everything in between.
+        </p>
+        <p class="about-body">
+          I've been performing and honing my craft for years, and I can't wait to
+          share more of my journey with you. Stay tuned for new music, live shows,
+          and everything that's still to come!
+        </p>
+
+        <div class="about-stats" aria-label="Quick stats">
+          <div class="stat">
+            <span class="stat-num">8+</span>
+            <span class="stat-lbl">Tracks</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-lbl">Genres</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-lbl">Passion</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery" class="gallery-section" aria-label="Photo and video gallery">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-tag">Gallery</span>
+      <h2 class="section-title">Photos &amp; Videos</h2>
+    </header>
+
+    <div class="gallery-filter reveal" role="group" aria-label="Filter gallery">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="photo">Photos</button>
+      <button class="filter-btn" data-filter="video">Videos</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Photos -->
+      <div class="g-item reveal" data-type="photo" data-src="media/img/3860e567-8e3f-4abb-9eaa-eade8e1acc67.jfif">
+        <img src="media/img/3860e567-8e3f-4abb-9eaa-eade8e1acc67.jfif" alt="Kristy Childs" loading="lazy">
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="g-item reveal" data-type="photo" data-src="media/img/49b89a59-deed-4003-a125-40d8dca40962.jfif">
+        <img src="media/img/49b89a59-deed-4003-a125-40d8dca40962.jfif" alt="Kristy Childs" loading="lazy">
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="g-item reveal" data-type="photo" data-src="media/img/930cf17e-a73c-425a-9292-e71fcb37cc83.jfif">
+        <img src="media/img/930cf17e-a73c-425a-9292-e71fcb37cc83.jfif" alt="Kristy Childs" loading="lazy">
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="g-item reveal" data-type="photo" data-src="media/img/646235904_122198033198548864_3243869592250960701_n.jpg">
+        <img src="media/img/646235904_122198033198548864_3243869592250960701_n.jpg" alt="Kristy Childs" loading="lazy">
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="g-item reveal" data-type="photo" data-src="media/img/654232470_122199834416548864_4694399882112794368_n.jpg">
+        <img src="media/img/654232470_122199834416548864_4694399882112794368_n.jpg" alt="Kristy Childs" loading="lazy">
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand"></i></div>
+      </div>
+
+      <!-- Videos -->
+      <div class="g-item reveal g-video" data-type="video" data-src="media/video/180cb4f4-5395-42e0-80af-c131f37503da.mp4">
+        <video preload="metadata" muted playsinline aria-label="Kristy Childs video">
+          <source src="media/video/180cb4f4-5395-42e0-80af-c131f37503da.mp4#t=0.5" type="video/mp4">
+        </video>
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-play"></i></div>
+      </div>
+      <div class="g-item reveal g-video" data-type="video" data-src="media/video/d6d49a5a-8c84-4838-bdb8-8582f318f898.mp4">
+        <video preload="metadata" muted playsinline aria-label="Kristy Childs video">
+          <source src="media/video/d6d49a5a-8c84-4838-bdb8-8582f318f898.mp4#t=0.5" type="video/mp4">
+        </video>
+        <div class="g-overlay" aria-hidden="true"><i class="fas fa-play"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close viewer"><i class="fas fa-xmark"></i></button>
+  <button class="lb-btn lb-prev"  id="lbPrev"  aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+  <button class="lb-btn lb-next"  id="lbNext"  aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-content" id="lbContent"></div>
+</div>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact-section" aria-label="Contact Kristy Childs">
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">Bookings, collabs, or just to say hi — I'd love to hear from you.</p>
+    </header>
+
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <div class="info-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+          <h4>Email</h4>
+          <p>hello@kristychilds.com</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon" aria-hidden="true"><i class="fas fa-microphone-lines"></i></div>
+          <h4>Bookings</h4>
+          <p>bookings@kristychilds.com</p>
+        </div>
+        <div class="contact-socials">
+          <h4>Follow Along</h4>
+          <div class="social-row" aria-label="Social media">
+            <a href="#" class="social-btn" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="Spotify" rel="noopener noreferrer" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form reveal" id="contactForm" novalidate aria-label="Send a message">
+        <div class="form-row">
+          <div class="field">
+            <label for="fName">Your Name</label>
+            <input type="text" id="fName" name="name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="fEmail">Email Address</label>
+            <input type="email" id="fEmail" name="email" placeholder="jane@example.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fSubject">Subject</label>
+          <select id="fSubject" name="subject" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="booking">Booking Enquiry</option>
+            <option value="collab">Collaboration</option>
+            <option value="media">Media / Press</option>
+            <option value="fan">Fan Message</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fMessage">Message</label>
+          <textarea id="fMessage" name="message" rows="5" placeholder="Tell me what's on your mind…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+        </button>
+        <div class="form-msg" id="formMsg" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#home" class="footer-logo" aria-label="Back to top">
+        <span class="logo-kc" aria-hidden="true">KC</span>
+        <span>Kristy Childs</span>
+      </a>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> Kristy Childs. All rights reserved.</p>
+      <nav aria-label="Footer social links">
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Spotify" rel="noopener noreferrer" target="_blank"><i class="fab fa-spotify"></i></a>
+          <a href="#" aria-label="TikTok" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
