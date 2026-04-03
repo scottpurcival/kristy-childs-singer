@@ -493,7 +493,7 @@ ul,ol{list-style:none;}
 .contact-section{padding:120px 0;}
 
 .contact-grid{
-  display:grid;grid-template-columns:1fr;max-width:720px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:560px;margin:0 auto;
 }
 .info-card{
   background:rgba(19,14,36,.85);border:1px solid var(--border);
@@ -509,8 +509,18 @@ ul,ol{list-style:none;}
   text-transform:uppercase;color:var(--muted);margin-bottom:6px;
 }
 .info-card p{font-size:.88rem;color:var(--text);}
+a.info-card{
+  display:block;text-decoration:none;cursor:pointer;
+  transition:border-color var(--t),transform var(--t),box-shadow var(--t);
+}
+a.info-card:hover{
+  border-color:var(--purple);
+  transform:translateY(-3px);
+  box-shadow:0 8px 32px rgba(124,58,237,.25);
+}
+a.info-card:hover .info-icon{background:rgba(124,58,237,.28);}
 
-.contact-socials{display:flex;justify-content:center;margin-bottom:40px;}
+.contact-socials{display:flex;justify-content:center;margin-top:40px;}
 .social-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
 .social-btn{
   width:42px;height:42px;background:rgba(19,14,36,.85);

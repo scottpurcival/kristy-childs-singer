@@ -474,48 +474,17 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-/* ============================================================
-   CONTACT FORM
-   ============================================================ */
-const form   = document.getElementById('contactForm');
-const formMsg = document.getElementById('formMsg');
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  formMsg.className = 'form-msg';
-
-  const name    = form.fName.value.trim();
-  const email   = form.fEmail.value.trim();
-  const subject = form.fSubject.value;
-  const message = form.fMessage.value.trim();
-
-  if (!name || !email || !subject || !message) {
-    show('Please fill in all fields.', 'err');
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    show('Please enter a valid email address.', 'err');
-    return;
-  }
-
-  const submitBtn = form.querySelector('button[type="submit"]');
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending…';
-
-  // Simulated submission – wire up to Formspree / Netlify Forms / etc.
-  setTimeout(() => {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message';
-    form.reset();
-    show('Message sent! I\'ll get back to you soon 💜', 'ok');
-  }, 1400);
+/* ── Contact obfuscation ────────────────────────────────────── */
+document.querySelectorAll('.obf-email').forEach(a => {
+  const addr = a.dataset.u + '@' + a.dataset.d;
+  a.href = 'mailto:' + addr;
+  a.querySelector('p').textContent = addr;
 });
-
-function show(msg, type) {
-  formMsg.textContent = msg;
-  formMsg.className = `form-msg ${type}`;
-  setTimeout(() => { formMsg.className = 'form-msg'; }, 7000);
-}
+document.querySelectorAll('.obf-phone').forEach(a => {
+  const num = a.dataset.a + a.dataset.b;
+  a.href = 'tel:' + num;
+  a.querySelector('p').textContent = num.replace(/(\+\d{2})(\d{3})(\d{3})(\d{3})/, '$1 $2 $3 $4');
+});
 
 /* ── Footer year ────────────────────────────────────────────── */
 document.getElementById('footerYear').textContent = new Date().getFullYear();
