@@ -493,7 +493,7 @@ ul,ol{list-style:none;}
 .contact-section{padding:120px 0;}
 
 .contact-grid{
-  display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;
+  display:grid;grid-template-columns:1fr;max-width:720px;margin:0 auto;
 }
 .info-card{
   background:rgba(19,14,36,.85);border:1px solid var(--border);
@@ -510,12 +510,8 @@ ul,ol{list-style:none;}
 }
 .info-card p{font-size:.88rem;color:var(--text);}
 
-.contact-socials{padding:22px 0 0;}
-.contact-socials h4{
-  font-size:.78rem;font-weight:600;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--muted);margin-bottom:14px;
-}
-.social-row{display:flex;gap:10px;flex-wrap:wrap;}
+.contact-socials{display:flex;justify-content:center;margin-bottom:40px;}
+.social-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
 .social-btn{
   width:42px;height:42px;background:rgba(19,14,36,.85);
   border:1px solid var(--border);border-radius:var(--r-sm);
@@ -643,7 +639,6 @@ ul,ol{list-style:none;}
   .playlist{border-left:none;border-top:1px solid var(--border);max-height:280px;min-height:0;}
   .about-grid{grid-template-columns:1fr;gap:48px;}
   .about-img-frame img{height:420px;}
-  .contact-grid{grid-template-columns:1fr;gap:36px;}
 }
 
 @media(max-width:768px){

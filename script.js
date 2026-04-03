@@ -52,9 +52,9 @@ function fmt(s) {
 
 function setVolIcon() {
   const v = audio.volume;
-  if (audio.muted || v === 0) volIcon.className = 'fas fa-volume-xmark';
-  else if (v < 0.45) volIcon.className = 'fas fa-volume-low';
-  else volIcon.className = 'fas fa-volume-high';
+  if (audio.muted || v === 0) volIcon.className = 'fas fa-fw fa-volume-xmark';
+  else if (v < 0.45) volIcon.className = 'fas fa-fw fa-volume-low';
+  else volIcon.className = 'fas fa-fw fa-volume-high';
 }
 
 function setPlayBtn(isPlaying) {
@@ -89,17 +89,18 @@ function buildPlaylist() {
   });
 }
 
-function highlightTrack(idx) {
+function highlightTrack(idx, scroll = true) {
   playList.querySelectorAll('.pl-item').forEach((li, i) => {
     li.classList.toggle('active', i === idx);
   });
-  // Scroll active item into view
-  const active = playList.querySelector('.active');
-  if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  if (scroll) {
+    const active = playList.querySelector('.active');
+    if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
 }
 
 /* ── Load / Play / Pause ────────────────────────────────────── */
-function loadTrack(idx, autoPlay = false) {
+function loadTrack(idx, autoPlay = false, scrollPlaylist = true) {
   current = idx;
   const t = TRACKS[idx];
 
@@ -110,7 +111,7 @@ function loadTrack(idx, autoPlay = false) {
   timeCur.textContent = '0:00';
   timeTot.textContent = '0:00';
 
-  highlightTrack(idx);
+  highlightTrack(idx, scrollPlaylist);
 
   if (autoPlay) {
     audio.load();
@@ -249,7 +250,7 @@ document.addEventListener('keydown', e => {
 
 /* ── Init player ────────────────────────────────────────────── */
 buildPlaylist();
-loadTrack(0, false);
+loadTrack(0, false, false);
 setVolIcon();
 
 /* ============================================================
@@ -426,6 +427,7 @@ function renderLb() {
     vid.controls = true;
     vid.autoplay = true;
     vid.playsInline = true;
+    vid.disablePictureInPicture = true;
     lbContent.appendChild(vid);
   }
 }
