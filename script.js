@@ -258,6 +258,20 @@ buildPlaylist();
 loadTrack(0, false, false);
 setVolIcon();
 
+/* ── Sync playlist height to player-main (desktop only) ─────── */
+function syncPlaylistHeight() {
+  const playerMain = document.querySelector('.player-main');
+  const playlist   = document.querySelector('.playlist');
+  if (!playerMain || !playlist) return;
+  if (window.innerWidth > 1040) {
+    playlist.style.maxHeight = playerMain.offsetHeight + 'px';
+  } else {
+    playlist.style.maxHeight = '';
+  }
+}
+syncPlaylistHeight();
+window.addEventListener('resize', syncPlaylistHeight);
+
 /* ============================================================
    PARTICLES
    ============================================================ */
