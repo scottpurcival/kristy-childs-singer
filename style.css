@@ -589,16 +589,17 @@ a.info-card:hover .info-icon{background:rgba(124,58,237,.28);}
   gap:20px;flex-wrap:wrap;
 }
 .footer-logo{
-  display:flex;align-items:center;gap:10px;
+  display:flex;align-items:center;gap:10px;flex:0.3;
   font-family:var(--font-hd);font-size:.95rem;font-weight:700;
 }
 .footer-copy{font-size:.78rem;color:var(--muted);flex:1;text-align:center;}
-.footer-socials{display:flex;gap:16px;}
+.footer-socials{display:flex;gap:16px;justify-content:right;}
 .footer-socials a{
   color:var(--muted);font-size:.95rem;
   transition:color var(--t),transform var(--t);
 }
 .footer-socials a:hover{color:var(--purple-lt);transform:translateY(-1px);}
+.footer-socials-nav{flex:0.3;}
 
 /* ── Back to top ────────────────────────────────────────────── */
 .back-to-top{
