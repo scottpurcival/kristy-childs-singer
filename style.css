@@ -332,7 +332,7 @@ ul,ol{list-style:none;}
 /* Playlist */
 .playlist{
   background:rgba(0,0,0,.18);border-left:1px solid var(--border);
-  display:flex;flex-direction:column;overflow:hidden;min-height:400px;
+  display:flex;flex-direction:column;overflow:hidden;min-height:400px;max-height:480px;
 }
 .playlist-head{
   padding:22px 20px 16px;display:flex;justify-content:space-between;align-items:center;
