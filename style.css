@@ -163,12 +163,12 @@ ul,ol{list-style:none;}
 }
 .hero-title{
   font-family:var(--font-hd);font-size:clamp(3.5rem,11vw,9rem);font-weight:900;
-  letter-spacing:-.03em;line-height:1.05;margin-bottom:22px;
+  letter-spacing:-.03em;line-height:.95;margin-bottom:22px;
   opacity:0;animation:fadeUp .9s var(--ease) forwards .4s;
 }
 .hero-first{
-  display:block;background:var(--grad);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  display:block;overflow:visible;padding-bottom:.1em;
+  background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .hero-last{
   display:block;color:#fff;text-shadow:0 0 100px rgba(124,58,237,.45);
