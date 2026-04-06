@@ -52,6 +52,10 @@ All assets are local:
 - Google Fonts: Playfair Display + Inter
 - Font Awesome 6.5 (icons)
 
+## Cache busting
+
+`index.html` loads CSS and JS with a `?v=N` query string for cache busting. **Whenever you modify `style.css` or `script.js`, bump the version number** in the corresponding `<link>` or `<script>` tag in `index.html` before committing.
+
 ## Key things to know
 
 - Social media links in the nav, contact section, and footer are all `href="#"` placeholders — they need real URLs.
