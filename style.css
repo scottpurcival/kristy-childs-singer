@@ -167,7 +167,7 @@ ul,ol{list-style:none;}
   opacity:0;animation:fadeUp .9s var(--ease) forwards .4s;
 }
 .hero-first{
-  display:block;overflow:visible;padding-bottom:.1em;
+  display:block;padding-bottom:.25em;margin-bottom:-.25em;
   background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .hero-last{
