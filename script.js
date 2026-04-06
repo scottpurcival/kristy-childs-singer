@@ -4,14 +4,19 @@
 
 /* ── Track List ─────────────────────────────────────────────── */
 const TRACKS = [
-  { title: 'Your Girl',            src: 'media/audio/Your%20Girl%20V2.mp3' },
-  { title: 'All Or Nothing',       src: 'media/audio/All%20Or%20Nothing.mp3' },
-  { title: 'Easy On Me',           src: 'media/audio/Easy%20on%20me.mp3' },
-  { title: 'Jar Of Hearts',        src: 'media/audio/Jar%20Of%20Hearts.mp3' },
-  { title: 'Mamma Mia',            src: 'media/audio/Mamma%20Mia.mp3' },
-  { title: 'My Immortal',          src: 'media/audio/My%20Immortal.mp3' },
-  { title: 'Teenage Dirtbag',      src: 'media/audio/TeenageDirtbag.mp3' },
-  { title: 'Your Girl (Original)', src: 'media/audio/Your%20Girl.mp3' },
+  { title: 'Your Girl',                src: 'media/audio/Your%20Girl%20V2.mp3' },
+  { title: 'All Or Nothing',           src: 'media/audio/All%20Or%20Nothing.mp3' },
+  { title: 'Easy On Me',               src: 'media/audio/Easy%20on%20me.mp3' },
+  { title: 'Jar Of Hearts',            src: 'media/audio/Jar%20Of%20Hearts.mp3' },
+  { title: 'Left Outside Alone',       src: 'media/audio/Left%20Outside%20Alone%20(cover)%20-%20Kristy.mp3' },
+  { title: 'Mamma Mia',                src: 'media/audio/Mamma%20Mia.mp3' },
+  { title: 'Mamma Mia (Cover)',        src: 'media/audio/Mamma%20Mia%20(cover)%20-%20Kristy.mp3' },
+  { title: 'Material Girl',            src: 'media/audio/Material%20Girl%20(cover)%20-%20Kristy.mp3' },
+  { title: 'My Immortal',              src: 'media/audio/My%20Immortal.mp3' },
+  { title: 'Sick and Tired',           src: 'media/audio/Sick%20and%20Tired%20(cover)%20-%20Kristy.mp3' },
+  { title: 'Teenage Dirtbag',          src: 'media/audio/TeenageDirtbag.mp3' },
+  { title: 'Whenever, Wherever',       src: 'media/audio/Whenever%2C%20Wherever%20(cover)%20-%20Kristy.mp3' },
+  { title: 'Your Girl (Original)',     src: 'media/audio/Your%20Girl.mp3' },
 ];
 
 /* ── State ──────────────────────────────────────────────────── */
@@ -328,7 +333,8 @@ window.addEventListener('scroll', onScroll, { passive: true });
 function onScroll() {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
   updateActiveLink();
-  bttEl.classList.toggle('show', window.scrollY > 500);
+  const nearBottom = (window.scrollY + window.innerHeight) >= (document.body.scrollHeight - 160);
+  bttEl.classList.toggle('show', window.scrollY > 500 && !nearBottom);
 }
 
 navToggle.addEventListener('click', () => {

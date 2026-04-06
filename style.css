@@ -140,6 +140,7 @@ ul,ol{list-style:none;}
 .hero{
   position:relative;min-height:100svh;display:flex;align-items:center;
   justify-content:center;overflow:hidden;padding-top:var(--nav-h);
+  padding-bottom:90px;
 }
 
 /* Background orbs */
@@ -589,7 +590,7 @@ a.info-card:hover .info-icon{background:rgba(124,58,237,.28);}
   display:flex;align-items:center;gap:10px;
   font-family:var(--font-hd);font-size:.95rem;font-weight:700;
 }
-.footer-copy{font-size:.78rem;color:var(--muted);}
+.footer-copy{font-size:.78rem;color:var(--muted);flex:1;text-align:center;}
 .footer-socials{display:flex;gap:16px;}
 .footer-socials a{
   color:var(--muted);font-size:.95rem;
@@ -679,6 +680,8 @@ a.info-card:hover .info-icon{background:rgba(124,58,237,.28);}
 
   .about-stats{gap:22px;}
   .form-row{grid-template-columns:1fr;}
+
+  .contact-grid{grid-template-columns:1fr;}
 
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
 
